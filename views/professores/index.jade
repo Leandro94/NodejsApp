@@ -1,0 +1,29 @@
+extends ../layout
+block content
+	title Portal Academico - Professores
+	h1 Professores
+	br
+	a(href="/" title="Home",class="btn btn-primary") Voltar
+	br
+	br
+	table(class="table well")
+		thead
+			tr
+				th ID:
+				th Nome:
+				th Data Vinculo:
+				th Curso Atuante:
+				th Formação:
+		tbody
+			each valor, i in lista
+				tr
+					td #{valor._id}
+					td #{valor.nome}
+					td #{valor.data_vinculo}
+					td #{valor.curso_atuante}
+					td #{valor.formacao}
+					td
+						a(href="/professores/edit/#{valor._id}", title="Editar", class="btn btn-primary") Editar
+					td
+						a(href="/professores/delete/#{valor._id}", title="Excluir", class="btn btn-danger") Excluir
+	a(href="/professores/create" title="Cadastrar",class="btn btn-primary") Novo

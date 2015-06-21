@@ -1,7 +1,25 @@
 doctype html
-html
-  head
-    title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
-  body
-    block content
+html(lang="pt-BR")
+head
+	link(rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap.min.css")
+	link(rel="stylesheet" type="text/css" href="stylesheets/style.css")
+body
+	div(class="navbar navbar-inverse navbar-fixed-top")
+		div(class="container")
+			div(class="navbar-header")
+				a(href="/" class="navbar-brand") Nodejs - Portal Academico
+			div(class="navbar-collapse collapse" id="navbar-main")
+				ul(class="nav navbar-nav")
+					li(class="dropdown")
+						a(href="/alunos") Alunos
+					li(class="dropdown")
+						a(href="/professores") Professores
+					li(class="dropdown")
+						a(href="/cursos") Cursos
+		
+	div(class="container")
+		block content
+
+		footer
+			div(class="containter")
+				p Desenvolvido por Leandro

@@ -1,0 +1,38 @@
+extends ../layout
+block content
+	title Portal Academico - Alunos
+	h1 Alunos
+	br
+	a(href="/" title="Home",class="btn btn-primary") Voltar
+	br
+	br
+	if messages.info
+		div(class="alert alert-success")
+			p= messages.info
+	br
+	table(class="table well")
+		thead
+			tr
+				th ID:
+				th Nome:
+				th Cadastro Matricula:
+				th Matricula:
+				th Curso:
+				th Turno:
+				th Periodo:
+				th Ações:
+		tbody
+			each valor, i in lista
+				tr
+					td #{valor._id}
+					td #{valor.nome}
+					td #{valor.data_matricula}
+					td #{valor.matricula}
+					td #{valor.curso}
+					td #{valor.turno}
+					td #{valor.periodo}
+					td
+						a(href="/alunos/edit/#{valor._id}", title="Editar", class="btn btn-primary") Editar
+					td
+						a(href="/alunos/delete/#{valor._id}", title="Excluir", class="btn btn-danger") Excluir
+	a(href="/alunos/create" title="Cadastrar",class="btn btn-primary") Novo

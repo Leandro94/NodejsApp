@@ -1,0 +1,26 @@
+extends ../layout
+block content
+	title Portal Academico - Professores
+	br
+	br
+	br
+	h1 Edição de Professor
+	br
+	a(href="/" title="Home",class="btn btn-primary") Voltar
+	br
+	br
+	form(method="POST", action="/professores/edit/#{value._id}", role="form")
+		div(class="form-group")
+			label Nome:
+			input(type="text", name="nome", class="form-control", value="#{value.nome}")
+		div(class="form-group")
+			label Curso Atuante:
+			input(type="text", name="curso_atuante", class="form-control", value="#{value.curso_atuante}")
+		div(class="form-group")
+			label Formação:
+			input(type="text", name="formacao", class="form-control", value="#{value.formacao}")
+		div(class="form-group")
+		input(type="submit", value="Salvar", class="btn btn-primary")
+		br
+		br
+		br
