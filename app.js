@@ -17,7 +17,7 @@ var app = express();
 
 
 //conectando com o banco
-mongoose.connect('mongodb://localhost/NodejsPortalAcademico',function(err)
+mongoose.connect('mongodb://nodejsportalacademico:leandro@ds047792.mongolab.com:47792/nodejsportalacademico',function(err)
   {
     if(err)
     {
