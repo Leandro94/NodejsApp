@@ -1,0 +1,10 @@
+language: node_js
+node_js:
+  - "0.12"
+deploy:
+  provider: heroku
+  api_key:
+    secure: 657ca527-1d87-46e2-b67e-ebd98ed7223d
+  app: portalnodejs
+  on:
+    repo: Leandro94/NodejsApp
